@@ -1,4 +1,4 @@
-# RollerBot
+# RollerBot for Rollercoin
 
 <p align="center">
   <b>Automated control and optimization tool.</b>
