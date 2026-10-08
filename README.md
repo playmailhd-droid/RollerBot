@@ -16,14 +16,15 @@
 3. **Starten:**
    * Starte die **`RollerBot.exe`** direkt aus dem Ordner. Alle Konfigurationen und Daten bleiben lokal auf deinem System.
 
----
+### 🔒 Lokale Datenspeicherung (Datenschutz)
+Der Bot speichert alle Einstellungen, Profile und Sitzungsdaten ausschließlich lokal im selben Verzeichnis auf deinem PC. Hier ein Auszug aus dem Code, der zeigt, wie Profile und Daten lokal geladen werden:
 
-## 🇬🇧 Installation & Guide
+```python
+import os
 
-1. **Download:**
-   * Go to the [Releases](https://github.com/playmailhd-droid/RollerBot/releases) section of this repository.
-   * Download the latest **`RollerBot.zip`**.
-2. **Extract:**
-   * Extract the ZIP file into a folder of your choice on your PC.
-3. **Run:**
-   * Launch **`RollerBot.exe`** directly from the folder. All configurations and data remain securely stored locally on your system.
+# Speichert alle Daten lokal im Ordner des Bots
+LOCAL_DATA_DIR = os.path.join(os.getcwd(), "user_data")
+os.makedirs(LOCAL_DATA_DIR, exist_ok=True)
+
+# Beispiel für lokale Chrome-Profile / Einstellungen
+CHROME_PROFILE_PATH = os.path.join(LOCAL_DATA_DIR, "chrome_profile")
